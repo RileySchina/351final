@@ -1,4 +1,6 @@
 <?php
+
+
 	
 	/* this function creates the database connection */
 	function dbconnect(&$connection) {
@@ -11,6 +13,7 @@
 		
 		// Test if connection succeeded
 		if(mysqli_connect_errno()) {
+			echo '<p>Hello</p>';
 			die("Database connection failed: ". mysqli_connect_errno());
 		} else {
 			echo '<p>CONNECTINNNGG</p>';
