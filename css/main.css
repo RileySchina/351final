@@ -1,0 +1,202 @@
+input {
+  width: 20em;
+  font-size: 1.2em;
+}
+.button-home {
+  display: inline-block;
+  padding: 1em;
+  color: #FFF;
+  background-color: #62929e;
+  border-radius: 0.25em;
+  font-size: 3em;
+  text-decoration: none;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+  /*controls the look and spacing of buttons*/
+}
+
+.button-home:hover, .button-home:focus {
+  background-color: #546a7b;
+  /*on hover or focus the buttons change color*/
+}
+
+.center {
+  text-align: center;
+
+}
+.banner {
+  background-color: #fdfdff;
+  padding: 1em;
+  margin-left: -1.5em;
+  margin-right: -1.5em;
+}
+.para-home {
+  width: 25em;
+  text-align: center;
+  display: inline-block;
+  padding-top: 0;
+}
+
+.button-book {
+  display: inline-block;
+  padding: 1em;
+  color: #FFF;
+  background-color: #62929e;
+  border-radius: 0.25em;
+  font-size: 1em;
+  text-decoration: none;
+  margin-top: 12em;
+  margin-bottom: .5em;
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+  /*controls the look and spacing of buttons*/
+}
+
+.button-book:hover, .button-book:focus {
+  background-color: #546a7b;
+  /*on hover or focus the buttons change color*/
+}
+
+.button {
+  display: inline-block;
+  padding: 1em;
+  color: #FFF;
+  background-color: #62929e;
+  border-radius: 0.25em;
+  font-size: 1em;
+  text-decoration: none;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+  /*controls the look and spacing of buttons*/
+}
+
+.button:hover, .button:focus {
+  background-color: #546a7b;
+  /*on hover or focus the buttons change color*/
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  padding: 1em;
+  background-color: #c6c5b9;
+}
+
+p {
+  font-size: 1em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+img {/*styling image size and border*/
+
+  /* 
+    Then we tell it we don't want it to exceed 100% of the parent element 
+    (we make it resize with the browser window) 
+    */
+    max-width: 100%;
+
+  /* 
+    CSS allows for some shorthand, in this case, we are specifying:
+    border: width type colour;
+    */
+    border: 0; 
+  }
+
+  article{
+    text-align: center;
+    margin: 2rem 0; 
+    padding: 2rem; 
+    border: 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  article.HomeInfo{
+  text-align: center;
+  padding:15px 30px;
+  margin:25px auto;
+  width:100%;
+  overflow:auto;
+  background-color: #c6c5b9;
+  border: 0;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  }
+
+  
+.mainContent{
+  margin:0px 5px;
+  width:100%;
+  max-width:1000px;
+  background-color: #c6c5b9;
+}
+.CameraDiscription {
+  margin: 200px;
+  width: 75%;
+  margin-top: 0;
+  margin-left:40px;
+  text-align: left;
+
+  /*padding-left: 20px;*/
+
+}
+
+
+  
+#news{
+    margin-bottom:1em;
+}
+
+
+#contact{
+    text-align:left;
+
+}
+
+#title{
+    margin-top:2em;
+    margin-left:3em;
+    margin-bottom:0em;
+    
+}
+
+
+
+
+p.left{
+    text-align:left;
+}
+p.right{
+    text-align:right;
+}
+h2.centering{
+    text-align:center;
+}
+
+.scrollArea{
+    position: absolute;
+    border: 5px solid gray;
+    padding: 1em;
+    background: white;
+    height: 70%;
+    overflow-y: scroll;
+    margin-top: 2em;
+    margin-left: 1em;
+    margin-right:1em;
+}
+.scrollArea img {
+  width: 20%;
+  height: 20%;
+  display:inline-block;
+}
+

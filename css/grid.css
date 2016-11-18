@@ -1,0 +1,78 @@
+/*Grid.css is taken from a tutorial from Iat 235*/
+/* 
+	This tutorial draws from "Don't Overthink Grids" available at
+	http://css-tricks.com/dont-overthink-it-grids/
+	*/
+
+
+/*
+	With this selector, we are specifying that all objects use
+	the border-box model (not the content-box model)
+	*/
+	*, *:after, *:before {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+
+/*
+	Here we are using a 'fancy' css selector that is 
+	specifying if the class of an item starts with
+	'grid-col-', then we should apply the styling listed
+	*/
+	[class^='grid-col-'] {
+		float: left;
+		padding: 0; 
+		text-align: center; /* center the content in this block by default */
+	}
+
+
+/*
+	Here we are defining our default column widths with the intention
+	of keeping it 'mobile first'
+	*/
+	.grid-col-1of3, .grid-col-5of10, .grid-col-2of10, .grid-col-1of4, .grid-col-3of4 {
+		width: 100%;
+	}
+
+
+
+
+/*
+	Here we are clearing floated items to ensure that
+	our 'grid' structure can have different rows
+	*/
+	.grid-row:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+
+
+/*
+	Using further @media queries, we specify that at a width of
+	less than 30em it should collapse the 2/10 columns into one stack
+
+	Think of this as saying, when display width > 30em, apply this
+	*/
+
+/*at specific widths the grid will make changes to the site including replacing images
+making changes in css classes, and resizing the columns*/
+@media (min-width: 10em){
+	.grid-col-5of10{
+		width:100%;
+	}
+}
+
+@media (min-width: 40em){
+	.grid-col-5of10{
+		width:50%;
+	}
+}
+
+
+
+
+
