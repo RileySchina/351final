@@ -15,6 +15,7 @@
 
 
 
+
 </head>
 
 <body>
@@ -22,6 +23,15 @@
 		<div class="banner">
 			<h1>Sfu Surrey Equipment Booking</h1>
 			
+		</div>
+
+		<div class="dropdown">
+			<button onclick="dropDown()" class="dropbtn">User</button>
+			<div id="myDropdown" class="dropdown-content">
+				<a href="userBookings.php">My Bookings</a>
+				<a href="logout.php">Logout</a>
+				
+			</div>
 		</div>
 		<div class = "grid-col-5of10">
 			<div>
@@ -44,7 +54,6 @@
 
 						<div class = "item-desc">
 							<p>Camera</p>
-							<p>dSLR Camera Includes 18-55mm f3.5-5.6 lens, 18 megapixel APS-C, 1920 x 1080 HD video at 24 (23.976)... </p>
 							<p>Availability: 5/5</p>
 						</div>
 					</a>
@@ -57,7 +66,6 @@
 
 						<div class = "item-desc">
 							<p>Camera</p>
-							<p>dSLR Camera Includes 18-55mm f3.5-5.6 lens, 18 megapixel APS-C, 1920 x 1080 HD video at 24 (23.976)... </p>
 							<p>Availability: 5/5</p>
 						</div>
 					</a>
@@ -67,6 +75,7 @@
 
 		</div>
 	</section>
+	<script type="text/javascript" src="js/dropdown.js"></script>
 </body>
 
 </html>

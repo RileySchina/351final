@@ -19,7 +19,7 @@
 		width: 50%;
 	}
 	
-	</style>-->
+</style>-->
 
 
 
@@ -30,6 +30,14 @@
 		<div class="banner">
 			<h1>Sfu Surrey Equipment Booking</h1>
 			
+		</div>
+		<div class="dropdown">
+			<button onclick="dropDown()" class="dropbtn">User</button>
+			<div id="myDropdown" class="dropdown-content">
+				<a href="userBookings.php">My Bookings</a>
+				<a href="logout.php">Logout</a>
+				
+			</div>
 		</div>
 		<div>
 			<h2>Equipment</h2>
@@ -47,18 +55,18 @@
 					<h3>Description:</h3>
 					<p>Focal length 28mm-112mm. Aperture f1.8-2.5. 10 megapixel. 720p HD video.
 						SD Memory Card (SDHC/SDXC compatible). Must complete still camera operation quiz.</p>
-					<h3>Rental Duration: 2 days</h3>
-					<h3>Classes used in:</h3>
-					<p>Iat 202, Iat 344, Iat 443</p>
-					<h3>Available: 10/26</h3>
-				</div>
+						<h3>Rental Duration: 2 days</h3>
+						<h3>Classes used in:</h3>
+						<p>Iat 202, Iat 344, Iat 443</p>
+						<h3>Available: 10/26</h3>
+					</div>
 
 
-				<a class="button" href="booking.php">Book Now</a>
+					<a class="button" href="booking.php">Book Now</a>
 
-			</div>	
-		</div>
-	</section>
-</body>
+				</div>	
+			</div>
+		</section>
+	</body>
 
-</html>
+	</html>
