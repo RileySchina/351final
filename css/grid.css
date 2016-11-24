@@ -66,13 +66,11 @@ making changes in css classes, and resizing the columns*/
 	}
 }
 
-@media (min-width: 50em){
+@media (min-width: 40em){
 	.grid-col-5of10{
 		width:50%;
 	}
 }
-
-
 
 
 

@@ -53,21 +53,3 @@
 </body>
 
 </html>
-
-
-<!-- get the right id from equipments and show the corresponding page
- -->
-
- <?php
-include 'php/dbconnect.php';
-$id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
-$sql = "SELECT id FROM equipment WHERE id='$id'";
-
-
- if($id ==1){
-printf("$id");
-}else if($id ==2){
-   printf("$id");
-}
-
-?> 

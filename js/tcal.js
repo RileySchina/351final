@@ -124,7 +124,6 @@ function f_tcalResetTime (d_date) {
 	d_date.setMinutes(0);
 	d_date.setHours(12);
 	return d_date;
-	
 }
 
 // closes calendar and returns all inputs to default state

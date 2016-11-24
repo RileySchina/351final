@@ -22,7 +22,7 @@
 		<h1>Filter By: Type</h1>
 
 		
-		<div id = "equipment-type" class="scrollAreaType">
+		<div id = "equipment-type">
 
 
 			
