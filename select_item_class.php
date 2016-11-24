@@ -36,8 +36,13 @@
 		<select id = "class-select" onclick="clickClass()">
 		  <option value="IAT100">IAT 100</option>
 		  <option value="IAT202">IAT 202</option>
+		  <option value="IAT244">IAT 244</option>
 		  <option value="IAT267">IAT 267</option>
+		  <option value="IAT320">IAT 320</option>
+		  <option value="IAT344">IAT 344</option>
 		  <option value="IAT351">IAT 351</option>
+		  <option value="IAT433">IAT 202</option>
+
 		</select>
 	
 	</section>
@@ -50,19 +55,7 @@
 		?>
 		
 		<!-- sample human readable item code, assume this is the structure for each generated item. Remove at end of project -->
-		<div class = "single-item">
-			<a href = "EquipmentSelection2.php">
-				<div class = "img-frame">
-					<img src = "img/camera.jpg">
-				</div>
-				
-				<div class = "item-desc">
-					<p>Camera</p>
-					<p>dSLR Camera Includes 18-55mm f3.5-5.6 lens, 18 megapixel APS-C, 1920 x 1080 HD video at 24 (23.976)... </p>
-					<p>Availability: 5/5</p>
-				</div>
-			</a>
-		</div>
+	
 		
 		</section>
 		
@@ -72,7 +65,7 @@
 		
 		function clickClass(className) {
 			
-			document.getElementById("item-list").innerHTML = "";
+			
 			
 			var selected = document.getElementById("class-select");
 			var selectedValue = selected.options[selected.selectedIndex].value;
@@ -101,6 +94,7 @@
 					
 					var items = JSON.parse(xhttp.responseText);
 					console.log(items);
+					document.getElementById("item-list").innerHTML = "";
 					
 					for(var itemArray in items) {
 						
