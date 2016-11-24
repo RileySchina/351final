@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link type = "text/css" rel = "stylesheet" href = "css/items.css"/>
 	<link type = "text/css" rel = "stylesheet" href = "css/main.css"/>
+	<link type = "text/css" rel = "stylesheet" href = "css/grid.css"/>
 
 	<title>Items</title>
 
@@ -49,6 +50,7 @@
 		?>
 		
 		<!-- sample human readable item code, assume this is the structure for each generated item. Remove at end of project -->
+		
 		<div class = "single-item">
 			<a href = "EquipmentSelection2.php">
 				<div class = "img-frame">

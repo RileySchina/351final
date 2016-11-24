@@ -1,0 +1,35 @@
+
+.single-item {
+	background-color: rgb(230, 230, 230);
+	width: 100%;
+	border: solid 0.1em;
+	margin-bottom: 1em;
+	
+	
+}
+
+.single-item a {
+	text-decoration: none;
+}
+
+.single-item:hover {
+	background-color: rgb(210, 210, 210);
+}
+
+.img-frame {
+	width:25%;
+	display:inline-block;
+}
+
+.img-frame img {
+	
+	width:5em;
+	height:5em;
+}
+
+.item-desc {
+	width:70%;
+	position: relative;
+	display: inline-block;
+	font-size: .8rem;
+}

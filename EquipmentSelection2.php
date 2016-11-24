@@ -11,16 +11,15 @@
 	<!-- <link rel="stylesheet" href="css/normalize.css"> -->
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/grid.css">
-<!--   <link rel="stylesheet" href="css/grid.css">
-	<link rel="stylesheet" href="css/fonts.css">  -->
+
 	
-	<style>
+	<!--<style>
 	
 	img {
 		width: 50%;
 	}
 	
-	</style>
+	</style>-->
 
 
 
@@ -38,12 +37,22 @@
 		<div class="grid-row">
 			<div class = "grid-col-5of10">
 
-				<img src= "img/camera.jpg">
+				<img class="equipImg" src= "img/camera.jpg">
 
 			</div>
 			<div class = "grid-col-5of10">
 
-				<p>With all the features and capabilities of the EOS 5DS, the EOS 5DS R camera offers the potential for even greater sharpness and fine detail for specialized situations. It features the same Canon designed and manufactured 50.6 Megapixel sensor, with the low-pass filter* (LPF) effect cancelled to provide even more fine edge sharpness and detail for critical subjects such as detailed landscapes, and other situations where getting the sharpest subject detail is a priority.</p>
+				
+				<div class="equipPara">
+					<h3>Description:</h3>
+					<p>Focal length 28mm-112mm. Aperture f1.8-2.5. 10 megapixel. 720p HD video.
+						SD Memory Card (SDHC/SDXC compatible). Must complete still camera operation quiz.</p>
+					<h3>Rental Duration: 2 days</h3>
+					<h3>Classes used in:</h3>
+					<p>Iat 202, Iat 344, Iat 443</p>
+					<h3>Available: 10/26</h3>
+				</div>
+
 
 				<a class="button" href="booking.php">Book Now</a>
 

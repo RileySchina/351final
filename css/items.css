@@ -38,8 +38,8 @@ section {
 
 #equipment-type {
 	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;
+	flex-flow: nowrap;
+	align-content: space-between;
 }
 
 #equipment-type img {
@@ -52,7 +52,7 @@ section {
 
 #equipment-type>div {
 	background-color: #80B0BC;
-	padding: 0.5em;
+	padding: 1.25em;
 	border-radius: 0.5em;
 }
 
@@ -100,21 +100,23 @@ section {
 
 .img-frame {
 	display: inline-block;
-	width: 150px;
-	height: 150px;
-	overflow: hidden;
+	width: 20%;
+	
+	
 }
 
 .img-frame img {
-	max-width: 150px;
-	max-height: 150px;
+	width:100%;
+	
 }
 
 .item-desc {
+	width:70%;
 	position: relative;
-	top: -2.5em;
 	display: inline-block;
-	margin-left: 1em;
+	padding-left: 1rem;
+	font-size: 1rem;
 }
+
 
 /* END INDIVIDUAL ITEM LIST */
