@@ -11,21 +11,13 @@
 	<!-- <link rel="stylesheet" href="css/normalize.css"> -->
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/grid.css">
-	<link rel="stylesheet" href="css/itemScroll.css"
+	<link rel="stylesheet" href="css/itemScroll.css">
 
 
 
 </head>
 
 <body>
-	<div class="dropdown">
-		<button onclick="myFunction()" class="dropbtn">Dropdown</button>
-		<div id="myDropdown" class="dropdown-content">
-			<a href="#">Link 1</a>
-			<a href="#">Link 2</a>
-			<a href="#">Link 3</a>
-		</div>
-	</div>
 	<section id = "home" class="center grid-row">
 		<div class="banner">
 			<h1>Sfu Surrey Equipment Booking</h1>
@@ -52,6 +44,7 @@
 
 						<div class = "item-desc">
 							<p>Camera</p>
+							<p>dSLR Camera Includes 18-55mm f3.5-5.6 lens, 18 megapixel APS-C, 1920 x 1080 HD video at 24 (23.976)... </p>
 							<p>Availability: 5/5</p>
 						</div>
 					</a>
@@ -64,30 +57,7 @@
 
 						<div class = "item-desc">
 							<p>Camera</p>
-							<p>Availability: 5/5</p>
-						</div>
-					</a>
-				</div>
-				<div class = "single-item">
-					<a href = "EquipmentSelection2.php">
-						<div class = "img-frame">
-							<img src = "img/camera.jpg">
-						</div>
-
-						<div class = "item-desc">
-							<p>Camera</p>
-							<p>Availability: 5/5</p>
-						</div>
-					</a>
-				</div>
-				<div class = "single-item">
-					<a href = "EquipmentSelection2.php">
-						<div class = "img-frame">
-							<img src = "img/camera.jpg">
-						</div>
-
-						<div class = "item-desc">
-							<p>Camera</p>
+							<p>dSLR Camera Includes 18-55mm f3.5-5.6 lens, 18 megapixel APS-C, 1920 x 1080 HD video at 24 (23.976)... </p>
 							<p>Availability: 5/5</p>
 						</div>
 					</a>
