@@ -13,7 +13,7 @@ $("#booked").click( function() {
     setInterval(function(){
         count--;
         if (count == 0) {
-            window.location = 'home.html'; 
+            window.location = 'home.php'; 
         }
     },1000);
 });

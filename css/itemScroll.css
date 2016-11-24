@@ -1,10 +1,10 @@
 
 .single-item {
 	background-color: rgb(230, 230, 230);
-	width: 100%;
+	min-width: 100%;
 	border: solid 0.1em;
 	margin-bottom: 1em;
-	
+
 	
 }
 
