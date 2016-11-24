@@ -13,25 +13,15 @@
 <body>
 	
 	<?php 
-			include 'php/dbconnect.php';
-			
-			//connect to database
-			dbconnect($connection);
-			//construct and execute content query
-			$finalQuery = "SELECT e.id, e.name, e.description, e.available, e.total, e.image FROM equipment e WHERE e.id = 1;";
-			$result = mysqli_query($connection, $finalQuery);
-			
-			//store results into initValue array
-			foreach($result as $initValue) {
-				$thisValue = $initValue;
-			}
-			
-			foreach($thisValue as $i) {
-				echo $i;
-				
-			}
-			
-		?>
+		include 'php/dbconnect.php';
+		include 'php/generateAllEquipment.php';
+		
+		//connect to database
+		dbconnect($connection);
+		//construct and execute content query
+		$finalQuery = "SELECT e.id, e.name, e.description, e.available, e.total, e.image FROM equipment e;";
+		$result = mysqli_query($connection, $finalQuery);
+	?>
 	
 	
 	<section id = "top-filter">
@@ -52,7 +42,13 @@
 	</section>
 	
 	<section id = "item-list">
-	
+		
+		<?php
+			//generates all equipment (see generateAllEquipment.php)
+			generateAllEquipment($result);
+		?>
+		
+		<!-- sample human readable item code, assume this is the structure for each generated item. Remove at end of project -->
 		<div class = "single-item">
 			<a href = "EquipmentSelection2.php">
 				<div class = "img-frame">
@@ -67,10 +63,8 @@
 			</a>
 		</div>
 		
-
 		</section>
-	
 		
 	</body>
 	
-	</html>
+</html>
