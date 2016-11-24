@@ -1,7 +1,7 @@
 <?php
 session_start();
  // if(!session_is_registered(myusername)){
- header("location:index.php"); //if successful, goes to homepage
+ header("location:home.php"); //if successful, goes to homepage
 // }
 ?>
 
