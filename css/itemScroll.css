@@ -33,3 +33,29 @@
 	display: inline-block;
 	font-size: .8rem;
 }
+.item-desc-booking {
+	width:40%;
+	position:relative;
+	display: inline-block;
+	font-size: .8rem;
+}
+.img-booking{
+	width:25%;
+	padding:1em;
+	position: relative;
+	display:inline-block;
+	text-align:left;
+
+}
+.item-booking{
+	width:25%;
+	position:relative;
+	display:inline-block;
+	float:center;
+}
+.button-booking{
+	width:25%;
+	position:relative;
+	display:inline-block;
+	float:right;
+}
