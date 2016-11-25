@@ -17,67 +17,56 @@
 	<div class="banner">
 			<h1>Sfu Surrey Equipment Booking</h1>
 		</div>
-
-		<div class="dropdown">
-			<button onclick="dropDown()" class="dropbtn">User</button>
-			<div id="myDropdown" class="dropdown-content">
-				<a href="userBookings.php">My Bookings</a>
-				<a href="logout.php">Logout</a>
-				
-			</div>
-		</div>
 	
 	
 		<h1>Filter By: Type</h1>
 
 		
 		<div id = "equipment-type" class="scrollAreaType">
+		
+			<div onclick = "select('arduino')" data-value = "arduino">
+				<div class = "img-frame-eq">
+					<img src = "img/nexus7.jpg">
+					
+				</div>
+				<p>Arduino</p>
+			</div>
 
-
-			
-			<div onclick = "select(1)" data-value = "1">
+			<div onclick = "select('audio')" data-value = "audio">
 
 				<div class = "img-frame-eq">
 					<img src = "img/laptop.jpg">
 					
 				</div>
-				<p>Computers</p>
+				<p>Audio</p>
 			</div>
 			
-			<div  onclick = "select(2)" data-value = "2">
+			<div  onclick = "select('camera_lighting')" data-value = "camera_lighting">
 				<div class = "img-frame-eq">
 					<img src = "img/audioBoom.jpg">
 					
 				</div>
-				<p>Audio Equipment</p>
+				<p>Camera/Lighting</p>
 			</div>
 			
 			
-			<div onclick = "select(3)" data-value = "3">
+			<div onclick = "select('computers')" data-value = "computers">
 				<div class = "img-frame-eq">
 					<img src = "img/arduino.jpg">
 					
 				</div>
-				<p>Arduino</p>
+				<p>Computers</p>
 			</div>
 			
 			
-			<div onclick = "select(4)" data-value = "4">
+			<div onclick = "select('phones_tablets')" data-value = "phones_tablets">
 				<div class = "img-frame-eq">
 					<img src = "img/toolkit.jpg">
 					
 				</div>
-				<p>Hand Tools</p>
-			</div>
-			
-			
-			<div onclick = "select(5)" data-value = "5">
-				<div class = "img-frame-eq">
-					<img src = "img/nexus7.jpg">
-					
-				</div>
 				<p>Phones and Tablets</p>
 			</div>
+			
 			
 		</div>
 
@@ -98,6 +87,79 @@
 
 <script>
 		
+		var selectedItems = {arduino: false,
+							audio: false,
+							camera_lighting: false,
+							computers: false,
+							phones_tablets: false};
+		
+		function select(eType) {
+			
+			if(selectedItems[eType] === false) {
+				selectedItems[eType] = true;
+			} else {
+				selectedItems[eType] = false;
+			}
+			
+			clickClass(selectedItems);
+			
+		}
+		
+		function clickClass(eTypes) {
+			
+			//start AJAX stuff
+			if (window.XMLHttpRequest) {
+				// Mozilla, Safari, ...
+				var xhttp = new XMLHttpRequest();
+			} else if (window.ActiveXObject) {
+				// IE
+				var xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			
+			parameters = "json_string=" + JSON.stringify(eTypes);
+			
+			//send postData to php as a stringified JSON object
+			xhttp.open("POST", "php/generateTypeEquipment.php", true);
+			xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xhttp.send(parameters);
+			
+			xhttp.onreadystatechange = function() {
+				if (xhttp.readyState == 4 && xhttp.status == 200) {
+					
+					console.log(xhttp.responseText);
+					
+					var items = JSON.parse(xhttp.responseText);
+					
+					document.getElementById("item-list").innerHTML = "";
+					
+					for(var itemArray in items) {
+						
+						itemArray = items[itemArray];
+						
+						//name, available, total, image, id
+						generateSingleItem(itemArray["name"], itemArray["available"], itemArray["total"], itemArray["image"], itemArray["id"]);
+					}
+				}
+			};
+			
+		}
+		
+		function generateSingleItem(name, available, total, image, id) {
+
+			var allItems = '<div class = "single-item">';
+			allItems += '<a href = "EquipmentSelection2.php?id=' + id + '">';
+			allItems += '<div class = "img-frame">';
+			allItems += '<img src = "' + image + '"></div>';
+			allItems += '<div class = "item-desc"><p>' + name + '</p>';
+			allItems += '<p>Availability: ' + available + '/' + total + '</p>';
+			allItems += '</div></a></div>';
+			
+			document.getElementById("item-list").innerHTML += allItems;
+			
+		}
+		
+		
+		/*
 			var clicked = false;
 			
 			//screw it this will do for now
@@ -126,11 +188,11 @@
 				
 				
 				
-				/*
-				var e = document.getElementById("aaaa").getAttribute('data-value');
+				
+				//var e = document.getElementById("aaaa").getAttribute('data-value');
 
-				document.getElementById("demo").innerHTML = e;*/
-			}
+				//document.getElementById("demo").innerHTML = e;
+			}*/
 		
 
 

@@ -33,9 +33,6 @@ $result=mysqli_query($connection,$sql);
 // printf($count);
 // If result matched $myusername and $mypassword, table row must be 1 row
 if($count==1){
-header("Refresh: 0; url=home.php?username=". $myusername ); // after 5sec it redirects to homepage
-
-exit;#should be added so rest of page doesn't load.
 
 // Register $myusername, $mypassword and redirect to file "login_success.php"
 // session_register("myusername");
@@ -48,5 +45,4 @@ else {
 die(header("location:main_login.php?loginFailed=true&reason=password")); // goes back to login page if it fails
 echo"Wrong Username or Password";
 }
-
 ?>

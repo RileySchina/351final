@@ -12,32 +12,26 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/grid.css">
 	<link rel="stylesheet" href="css/itemScroll.css">
-
-
-
-
 </head>
 
 <body>
+
+	<?php 
+		include 'php/dbconnect.php';
+		include 'php/generateAllEquipment.php';
+		
+		//connect to database
+		dbconnect($connection);
+		
+		//construct and execute content query
+		$finalQuery = "SELECT e.id, e.name, e.available, e.total, e.image FROM equipment e;";
+		$result = mysqli_query($connection, $finalQuery);
+	?>
+
 	<section id = "home" class="center grid-row">
 		<div class="banner">
 			<h1>Sfu Surrey Equipment Booking</h1>
 			
-		</div>
-
-		<div class="dropdown">
-			<button onclick="dropDown()" class="dropbtn">
-			<!-- get the value of the username parameter from the url and display it -->
-			<?php 
-			echo $_GET['username']; 
-			?>
-				
-			</button>
-			<div id="myDropdown" class="dropdown-content">
-				<a href="userBookings.php">My Bookings</a>
-				<a href="logout.php">Logout</a>
-				
-			</div>
 		</div>
 		<div class = "grid-col-5of10">
 			<div>
@@ -52,6 +46,7 @@
 		<div class = "grid-col-5of10" id="item-list">
 
 			<div class = "scrollArea">
+				
 				<div class = "single-item">
 					<a href = "EquipmentSelection2.php">
 						<div class = "img-frame">
@@ -64,24 +59,16 @@
 						</div>
 					</a>
 				</div>
-				<div class = "single-item">
-					<a href = "EquipmentSelection2.php">
-						<div class = "img-frame">
-							<img src = "img/camera.jpg">
-						</div>
-
-						<div class = "item-desc">
-							<p>Camera</p>
-							<p>Availability: 5/5</p>
-						</div>
-					</a>
-				</div>
+				
+				<?php
+					//generates all equipment (see generateAllEquipment.php)
+					generateAllEquipment($result);
+				?>
 
 			</div>
 
 		</div>
 	</section>
-	<script type="text/javascript" src="js/dropdown.js"></script>
 </body>
 
 </html>
