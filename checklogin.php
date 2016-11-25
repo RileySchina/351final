@@ -42,7 +42,7 @@ header("location:login_success.php");
 else {
 
 
-die(header("location:main_login.php?loginFailed=true&reason=password")); // goes back to login page if it fails
+die(header("location:index.php?loginFailed=true&reason=password")); // goes back to login page if it fails
 echo"Wrong Username or Password";
 }
 ?>

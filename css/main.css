@@ -274,3 +274,12 @@ img {/*styling image size and border*/
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+
+/*login stuff*/
+.loginBackground{
+  background-color:#FFF;
+  padding:1em;
+  margin-top:1em;
+  margin:auto;
+}
