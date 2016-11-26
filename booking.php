@@ -46,7 +46,7 @@
 			<h2>Choose booking date:</h2>
 			<form action="#">
 				<!-- add class="tcal" to your input field -->
-				<div><input type="text" id = "calendar" name="date" class="tcal" value="1/1/2010"/></div>
+				<div><input type="text" id = "calendar" name="date" class="tcal" value=""/></div>
 			</form>
 		</div>
 		
