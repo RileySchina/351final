@@ -26,6 +26,20 @@
 			<h1>Sfu Surrey Equipment Booking</h1>
 			
 		</div>
+		<div class="dropdown">
+			<button onclick="dropDown()" class="dropbtn">
+			<!-- get the value of the username parameter from the url and display it -->
+			<?php 
+			echo $_GET['username']; 
+			?>
+				
+			</button>
+			<div id="myDropdown" class="dropdown-content">
+				<a href="userBookings.php">My Bookings</a>
+				<a href="logout.php">Logout</a>
+				
+			</div>
+		</div>
 		<div>
 			<!--http://www.softcomplex.com/products/tigra_calendar/
 			where we got the calendar from-->
