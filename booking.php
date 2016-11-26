@@ -50,7 +50,7 @@
 			</form>
 		</div>
 		
-		<p onclick = "bookItem()">AAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+		<p onclick = "bookItem()"></p>
 		
 		<a class="button-book" id="booked" onclick = "bookItem()">Book</a>
 
