@@ -55,6 +55,8 @@
 			}
 		}
 		
+		//echo $contentQuery;
+		
 		/* SEND OBJECT BACK TO INDEX AS JSON OBJECT */
 		echo json_encode($encode);
 	}

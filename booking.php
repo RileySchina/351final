@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/tcal.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/dropdown.css">
 	<script type="text/javascript" src="js/tcal.js"></script>
 <!--   <link rel="stylesheet" href="css/grid.css">
 	<link rel="stylesheet" href="css/fonts.css">  -->
@@ -23,14 +24,17 @@
 <body>
 	<section id = "booking" class="center">
 		<div class="banner">
-			<h1>Sfu Surrey Equipment Booking</h1>
+			<h1><a id = "top" href = "home.php">Sfu Surrey Equipment Booking</a></h1>
 			
 		</div>
+		
 		<div class="dropdown">
 			<button onclick="dropDown()" class="dropbtn">
 			<!-- get the value of the username parameter from the url and display it -->
 			<?php 
-			echo $_GET['username']; 
+				//start session for user
+				session_start();
+				echo $_SESSION['currentUser']; 
 			?>
 				
 			</button>
@@ -40,39 +44,31 @@
 				
 			</div>
 		</div>
+		
+		
 		<div>
 			<!--http://www.softcomplex.com/products/tigra_calendar/
 			where we got the calendar from-->
 			<h2>Choose booking date:</h2>
 			<form action="#">
 				<!-- add class="tcal" to your input field -->
-				<div><input type="text" id = "calendar" name="date" class="tcal" value=""/></div>
+				<div><input type="text" id = "calendar" name="date" class="tcal" value="" required/></div>
 			</form>
 		</div>
-		
-		<p onclick = "bookItem()"></p>
-		
 		<a class="button-book" id="booked" onclick = "bookItem()">Book</a>
 
 		
 	</section>
 	<script type="text/javascript" src="js/zepto.js"></script>
 	<script type="text/javascript" src="js/thanks.js"></script>
-	<script type="text/javascript" src="js/dropdown.js"></script>
 
 </body>
-
+<script type="text/javascript" src="js/dropdown.js"></script>
 <script>
 	function bookItem() {
 		var pkg = [bookingDate = document.getElementById('calendar').value, getQueryVariable("id")];
-			
 		
-		/*
-		var bookingDate = document.getElementById('calendar').value;
-		var eId = getQueryVariable("id");*/
-		
-		console.log(pkg);
-		
+		//console.log(userName);
 		
 		//start AJAX stuff because why not
 		if (window.XMLHttpRequest) {
@@ -93,22 +89,10 @@
 			xhttp.onreadystatechange = function() {
 				
 				
-				
 				if (xhttp.readyState == 4 && xhttp.status == 200) {
 					
 					console.log(xhttp.responseText);
-					/*
-					var items = JSON.parse(xhttp.responseText);
 					
-					document.getElementById("item-list").innerHTML = "";
-					
-					for(var itemArray in items) {
-						
-						itemArray = items[itemArray];
-						
-						//name, available, total, image, id
-						generateSingleItem(itemArray["name"], itemArray["available"], itemArray["total"], itemArray["image"], itemArray["id"]);
-					}*/
 				}
 			};
 		

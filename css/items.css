@@ -50,14 +50,22 @@ section {
 	opacity: 1;
 }
 
+.imgTypeSelected {
+	opacity: 1 !important;
+}
+
 #equipment-type>div {
 	background-color: #80B0BC;
 	padding: 1.25em;
 	border-radius: 0.5em;
 }
 
-#equipment-type > div:hover {
+#equipment-type > div:hover, 
 	background-color: #94C4C6;
+}
+
+.divTypeSelected {
+	background-color: #94C4C6 !important;
 }
 
 

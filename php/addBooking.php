@@ -4,6 +4,9 @@
 	//connect to database
 	dbconnect($connection);	
 	
+	//start session for user
+	session_start();
+	
 	$obj = json_decode($_POST["json_string"], true);
 	
 	$jObject = null;
@@ -19,7 +22,7 @@
 		$splitDate = str_replace("-", "", $bookingDate);
 		
 		$contentQuery = "INSERT INTO useritem (dueDate, equipmentId, userName) VALUES (";
-		$contentQuery .= $splitDate .", ". $pkg[1].", 1);";
+		$contentQuery .= $splitDate .", ". $pkg[1].', "'.$_SESSION['currentUser'].'");';
 		
 		//do the query!
 		mysqli_query($connection, $contentQuery);
