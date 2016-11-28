@@ -32,7 +32,15 @@ $result=mysqli_query($connection,$sql);
  $count=mysqli_num_rows($result);
 // printf($count);
 // If result matched $myusername and $mypassword, table row must be 1 row
+$query = parse_url($url, PHP_URL_QUERY);
+if ($query) {
+    $url .= "url=select_item_class.php?username=". $myusername ;
+    }
 if($count==1){
+header("Refresh: 0; url=home.php?username=". $myusername ); // after 5sec it redirects to homepage
+// header("Refresh: 0; url=select_item_class.php?username=". $myusername );
+// header("Refresh: 0; url=select_item_type.php?username=". $myusername ); // after 5sec it redirects to homepage
+exit;#should be added so rest of page doesn't load.
 
 // Register $myusername, $mypassword and redirect to file "login_success.php"
 // session_register("myusername");
@@ -45,4 +53,5 @@ else {
 die(header("location:main_login.php?loginFailed=true&reason=password")); // goes back to login page if it fails
 echo"Wrong Username or Password";
 }
+
 ?>
